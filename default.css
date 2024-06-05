@@ -1,0 +1,93 @@
+.body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* background: url("images/Screenshot\ 2024-04-03\ 192927.png") no-repeat; */
+  /* background-size: 1100px;
+      background-position-x: right;
+      background-attachment: fixed;
+      position: relative; */
+  /* position:relative; */
+}
+.top-part {
+  background-color: #FCFCFC;
+  padding: 20px;
+  flex: 2;
+  position: relative;
+  background: url("images/Screenshot\ \(95\).png") no-repeat;
+  background-size: 1000px;
+  background-position: right;
+  /* z-index: -1; */
+}
+.bottom-part {
+  background-color: #FCFCFC;
+  padding: 20px;
+  flex: 1;
+}
+.services .boxes {
+  justify-content: space-between;
+  position: relative;
+}
+.services .boxes .box {
+  margin: 10px 0;
+  width: 800px;
+  text-align: center;
+  border-radius: 12px;
+  padding: 10px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover {
+  background: #6E337D;
+  color: #fff;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FCFCFC;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.image-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+.image-container img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+}
+.image-container img:first-child {
+  transform: rotate(45deg);
+}
+.image-container img:last-child {
+  transform: rotate(-45deg);
+}
+.title h2 {
+  background-color: #690483;
+  padding: 20px;
+  /* display: flex; */
+  align-items: center;
+  text-align: center;
+  font-family: 'Bodoni MT', 'Bodoni 72', 'Didot', serif;
+  font-style: italic;
+  color: #FCFCFC;
+}

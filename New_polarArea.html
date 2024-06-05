@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart.js Example</title>
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="myChart" width="400" height="200"></canvas>
+    <script>const labels = {{labels | tojson}};
+const data = {
+  labels: labels,
+  datasets: {{datasets | tojson}}
+};
+
+const config = {
+  type: 'polarArea',
+  data: data,
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Polar Area Chart'
+      }
+    }
+  },
+};
+        var canvas = document.getElementById('myChart');
+    canvas.width = window.innerWidth ;
+    canvas.height = window.innerHeight ;
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, config);
+    </script>
+</body>
+</html>

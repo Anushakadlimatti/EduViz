@@ -1,0 +1,38 @@
+.app-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 20px;
+  background-color: grey; /* Background color for the entire container */
+  border: 1px solid #ccc; /* Border for the entire container */
+}
+
+.content {
+  width: 300px;
+}
+
+.sidebar {
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  background-color: #e0e0e0; /* Background color for the header */
+  padding: 10px; /* Add some padding to the header */
+  border: 1px solid #ccc; /* Border for the header */
+  border-radius: 5px; /* Rounded corners for the header */
+}
+
+.checkbox-container {
+  margin-bottom: 5px;
+}
+
+#doneButton {
+  margin-top: 10px;
+  background-color: #007bff; /* Background color for the button */
+  color: #fff; /* Text color for the button */
+  border: none; /* Remove default button border */
+  padding: 10px 20px; /* Add padding to the button */
+  border-radius: 5px; /* Rounded corners for the button */
+}

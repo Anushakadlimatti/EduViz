@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>EduViz</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <div class="about-details">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='Images/Untitled (1).png') }}">
+  </div>
+
+
+</head>
+
+<body>
+  <!-- Move to up button -->
+  <div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <!-- navgaition menu -->
+  <nav>
+    <div class="navbar">
+      <div class="logo"><a href="#">EduViz.</a></div>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <div class="cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+      </ul>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/EllucianInc?s=20"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/ellucian/?hl=en"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Home Section Start -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <div class="text">
+        <!-- <div class="text-one">Hello,</div> -->
+        <div class="text-two">Here's a DataModel</div>
+        <div class="text-three">That can Save Your Career </div>
+        <div class="text-four">Upload Your File Here</div>
+      </div>
+      <div class="button">
+        <input type="file" id="csvFileInput" accept=".csv">
+        <button onclick="uploadFile()">Upload</button>
+    </div>
+      <!-- <div class="">
+        <img src="Images/charts.png" alt=""/>
+        </div> -->
+    </div>
+  </section>
+
+  <!-- About Section Start -->
+  <section class="about" id="about">
+    <div class="content">
+      <div class="title"><span>Default View</span></div>
+      <div class="about-details">
+        <div class="left">
+          <img src="{{ url_for('static', filename='Images/da3.png') }}" alt="" />
+
+        </div>
+        <div class="right">
+          <div class="topic">Visualizing the best Features</div>
+          <p>
+            With this data, you can use various visualization techniques such as bar charts, scatter plots, or radar
+            charts to
+            analyze the best features for university selection. For example, you could create a bar chart to compare the
+            average SAT
+            scores of different universities, or a radar chart to compare multiple features such as tuition, acceptance
+            rate, and
+            graduation rate for each university.
+            If You are not sure what features you can consider for university selection, just go through our some of the
+            default visualized features.
+          </p>
+          <div class="button">
+            <button onclick="location.href='/default'" id="defbut">Click to view Default visuals</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Services Section Start -->
+  <section class="services" id="services">
+    <div class="content">
+      <div class="title"><span>Our Services</span></div>
+      <div class="boxes">
+        <div class="box" onclick="location.href='/lineChartDataset'">
+          <div class="icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="topic">line Chart Dataset</div>
+          <p>A pie chart is a type of graph representing data in a circular form, with each slice of the circle
+            representing a
+            fraction or proportionate part of the whole.</p>
+        </div>
+        <div class="box" onclick="location.href='/pieChart'">
+          <div class="icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="topic">Pie Chart</div>
+          <p>Bar chart is a specific way of representing data using rectangular bars where the length of each bar is
+            proportional to
+            the value they represent.</p>
+        </div>
+        <div class="box" onclick="location.href='/donught'">
+          <div class="icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="topic">Donught Chart</div>
+          <p>The scatter diagram graphs pairs of numerical data, with one variable on each axis, to look for a
+            relationship between
+            them.</p>
+        </div>
+        <div class="box" onclick="location.href='/multiAxis'">
+          <div class="icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="topic">Multi Axis</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem
+            eligendi?</p>
+        </div>
+        <div class="box" onclick="location.href='/floatBar'">
+          <div class="icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="topic">Float Bar</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem
+            eligendi?</p>
+        </div>
+        <div class="box" onclick="location.href='/polarArea'">
+          <div class="icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="topic">Polar Area</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem
+            eligendi?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me section Start -->
+  <section class="contact" id="contact">
+    <div class="content">
+      <div class="title"><span>Contact Me</span></div>
+      <div class="text">
+        <div class="topic">Have Any Project?</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam neque ipsum corrupti dolores, facere numquam
+          voluptate aspernatur sit perferendis qui nisi modi! Recusandae deserunt consequatur voluptatibus alias
+          repellendus nobis eligendi.</p>
+        <div class="button">
+          <button>Let's Chat</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section Start -->
+  <footer>
+    <div class="text">
+      <span>Created By <a href="#">SalsaStack</a> | &#169; 2024 All Rights Reserved</span>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
